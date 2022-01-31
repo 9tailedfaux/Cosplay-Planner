@@ -9,5 +9,20 @@
         android:id="@+id/mainListFragment"
         android:name="com.example.cosplayplanner.MainListFragment"
         android:label="Cosplays"
-        tools:layout="@layout/fragment_main_list" />
+        tools:layout="@layout/fragment_main_list" >
+        <action
+            android:id="@+id/action_mainListFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.cosplayplanner.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <argument
+            android:name="cosplay"
+            app:argType="com.example.cosplayplanner.models.Cosplay"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
 </navigation>
