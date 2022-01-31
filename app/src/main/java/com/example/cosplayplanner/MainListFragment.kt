@@ -3,11 +3,16 @@ package com.example.cosplayplanner
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import com.example.cosplayplanner.models.MainViewModel
 
 class MainListFragment : Fragment() {
 
+    private lateinit var viewModel: MainViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        viewModel = MainViewModel(requireActivity().application)
     }
 
     override fun onCreateView(

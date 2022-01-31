@@ -54,7 +54,7 @@
                 android:drawableEnd="@drawable/ic_round_arrow_upward_24"
                 android:drawableTint="?colorOnPrimary"
                 android:gravity="center_vertical"
-                android:text="Placeholder"
+                android:text="ABC"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toStartOf="@id/filter_button"
                 android:id="@+id/sort_button"/>
