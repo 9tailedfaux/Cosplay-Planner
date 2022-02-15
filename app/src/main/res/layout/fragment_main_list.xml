@@ -20,7 +20,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.example.cosplayplanner.ExpandableSearchBar
+            <com.example.cosplayplanner.views.ExpandableSearchBar
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -45,7 +45,7 @@
                     android:visibility="gone">
 
                 </com.google.android.material.textfield.MaterialAutoCompleteTextView>
-            </com.example.cosplayplanner.ExpandableSearchBar>
+            </com.example.cosplayplanner.views.ExpandableSearchBar>
 
             <Button
                 android:layout_width="wrap_content"

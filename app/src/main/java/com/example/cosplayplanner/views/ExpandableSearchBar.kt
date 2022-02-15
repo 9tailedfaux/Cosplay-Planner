@@ -1,9 +1,9 @@
-package com.example.cosplayplanner
+package com.example.cosplayplanner.views
 
 import android.content.Context
 import android.util.AttributeSet
-import android.widget.LinearLayout
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.example.cosplayplanner.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 
