@@ -4,19 +4,14 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import com.example.cosplayplanner.databinding.FragmentMainListBinding
-import com.example.cosplayplanner.models.MainViewModel
 
 class MainListFragment : Fragment() {
 
-    private lateinit var viewModel: MainViewModel
     private lateinit var binding: FragmentMainListBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        viewModel = MainViewModel(requireActivity().application)
     }
 
     override fun onCreateView(
