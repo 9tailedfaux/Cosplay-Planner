@@ -4,7 +4,11 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.example.cosplayplanner.adapters.MainListAdapter
 import com.example.cosplayplanner.databinding.FragmentMainListBinding
+import com.example.cosplayplanner.models.Cosplay
+import io.realm.Realm
+import io.realm.kotlin.where
 
 class MainListFragment : Fragment() {
 
@@ -26,11 +30,14 @@ class MainListFragment : Fragment() {
             it.findNavController().navigate(action)
         }
 
+        val realm = Realm.getDefaultInstance()
+        val allCosplays = realm.where<Cosplay>().findAll()
+        binding.mainListRecycler.adapter = MainListAdapter(allCosplays)
+
         return binding.root
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-
     }
 }

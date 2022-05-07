@@ -10,8 +10,7 @@ import com.example.cosplayplanner.R
 import com.example.cosplayplanner.models.Cosplay
 import io.realm.RealmResults
 
-class MainListAdapter : RecyclerView.Adapter<MainListHolder>() {
-    private lateinit var data: RealmResults<Cosplay>
+class MainListAdapter(private var data: RealmResults<Cosplay>) : RecyclerView.Adapter<MainListHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainListHolder {
         val holder = LayoutInflater.from(parent.context).inflate(R.layout.holder_main_list, parent, false)
@@ -24,10 +23,6 @@ class MainListAdapter : RecyclerView.Adapter<MainListHolder>() {
 
     override fun getItemCount(): Int {
         return data.size
-    }
-
-    fun setData(_data: RealmResults<Cosplay>) {
-        data = _data
     }
 }
 
