@@ -1,7 +1,10 @@
 package com.example.cosplayplanner.models
 
 import io.realm.RealmObject
+import io.realm.annotations.PrimaryKey
+import org.bson.types.ObjectId
 
-class Series: RealmObject() {
-
+open class Series: RealmObject() {
+    @PrimaryKey
+    var _id: ObjectId = ObjectId()
 }

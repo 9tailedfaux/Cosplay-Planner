@@ -30,13 +30,4 @@ class EditFragment : Fragment() {
         binding = FragmentEditBinding.inflate(inflater, container, false)
         return binding.root
     }
-
-    companion object {
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) = EditFragment().apply {
-            arguments = Bundle().apply {
-                putString(ARG_MODEL, param1)
-            }
-        }
-    }
 }

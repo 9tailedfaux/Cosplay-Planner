@@ -11,7 +11,7 @@ import com.google.android.material.textfield.TextInputLayout
 
 class MaterialEditText(private val ctx: Context, attrs: AttributeSet?): FrameLayout(ctx, attrs) {
 
-    fun setIcon(icon: Int){
+    private fun setIcon(icon: Int){
         inputLayout.startIconDrawable = getDrawable(ctx, icon)
     }
 
@@ -27,10 +27,11 @@ class MaterialEditText(private val ctx: Context, attrs: AttributeSet?): FrameLay
 
     init {
         initView()
-        val arr = ctx.obtainStyledAttributes(attrs, R.styleable.MaterialEditText)
-        val icon = arr.getInt(R.styleable.MaterialEditText_icon, 0)
-        if (icon != 0) setIcon(icon)
-        arr.recycle()
+        if (attrs != null) {
+            val icon = attrs.getAttributeResourceValue(ns, "icon", 0)
+            if (icon != 0) setIcon(icon)
+            editText.hint = attrs.getAttributeValue(ns, "text")
+        }
     }
 
     constructor(ctx: Context): this(ctx, null) {
@@ -41,5 +42,9 @@ class MaterialEditText(private val ctx: Context, attrs: AttributeSet?): FrameLay
         val view = inflate(ctx, R.layout.material_edittext, this)
         editText = view.findViewById(R.id.edittext)
         inputLayout = view.findViewById(R.id.textlayout)
+    }
+
+    companion object {
+        const val ns = "http://schemas.android.com/apk/res/android"
     }
 }

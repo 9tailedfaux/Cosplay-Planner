@@ -9,6 +9,7 @@
     <com.example.cosplayplanner.views.MaterialEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Test"
         app:layout_constraintTop_toTopOf="parent"
         app:icon="@drawable/ic_round_person_24"
         />

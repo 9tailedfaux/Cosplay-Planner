@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="MaterialEditText">
-        <attr name="icon" format="integer"/>
+        <attr name="myIcon" format="integer"/>
     </declare-styleable>
 </resources>
