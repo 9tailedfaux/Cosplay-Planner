@@ -1,124 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".EditFragment">
-
-    <com.google.android.material.textfield.TextInputLayout
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/characterLayout"
-        app:startIconDrawable="@drawable/ic_round_face_24"
-        app:layout_constraintTop_toTopOf="parent">
-        <com.google.android.material.textfield.TextInputEditText
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".EditFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/characterEdittext"
-            android:hint="@string/character"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="12dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/characterLayout"
+                app:startIconDrawable="@drawable/ic_round_face_24"
+                app:layout_constraintTop_toTopOf="parent">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/characterEdittext"
+                    android:hint="@string/character"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/seriesLayout"
-        app:startIconDrawable="@drawable/ic_round_tv_24"
-        app:layout_constraintTop_toBottomOf="@+id/characterLayout">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/seriesEdittext"
-            android:hint="@string/series"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seriesLayout"
+                app:startIconDrawable="@drawable/ic_round_tv_24"
+                app:layout_constraintTop_toBottomOf="@+id/characterLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seriesEdittext"
+                    android:hint="@string/series"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/budgetLayout"
-        app:startIconDrawable="@drawable/ic_round_attach_money_24"
-        app:layout_constraintTop_toBottomOf="@+id/seriesLayout">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/budgetEdittext"
-            android:hint="@string/budget"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/budgetLayout"
+                app:startIconDrawable="@drawable/ic_round_attach_money_24"
+                app:layout_constraintTop_toBottomOf="@+id/seriesLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/budgetEdittext"
+                    android:hint="@string/budget"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/budgetLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/dueDateLayout"
-        android:id="@+id/startDateLayout"
-        android:background="@drawable/rounded_shape_colored"
-        android:paddingVertical="5dp"
-        android:paddingHorizontal="15dp">
+            <include layout="@layout/layout_date_selector_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/budgetLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/dueDateLayout"
+                android:layout_marginTop="10dp"
+                android:id="@+id/startDateLayout"
+                app:hint='@{@string/start_date}'
+                app:date='@{@string/mm_dd_yyyy}'
+                app:icon="@{@drawable/ic_round_today_24}"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/start_date"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/startDateHint"
-            android:textSize="11sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/mm_dd_yyyy"
-            app:layout_constraintTop_toBottomOf="@+id/startDateHint"
-            app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/startDateDisplay"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/startDateDisplay"
-            android:src="@drawable/ic_round_today_24"
-            android:contentDescription="@string/start_date_icon" />
-
+            <include layout="@layout/layout_date_selector_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/budgetLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/startDateLayout"
+                android:layout_marginTop="10dp"
+                android:id="@+id/dueDateLayout"
+                app:hint='@{@string/due_date}'
+                app:date='@{@string/mm_dd_yyyy}'
+                app:icon="@{@drawable/ic_round_event_busy_24}"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/budgetLayout"
-        app:layout_constraintStart_toEndOf="@id/startDateLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:id="@+id/dueDateLayout"
-        android:background="@drawable/rounded_shape_colored"
-        android:paddingVertical="5dp"
-        android:paddingHorizontal="15dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/due_date"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/dueDateHint"
-            android:textSize="11sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/mm_dd_yyyy"
-            app:layout_constraintTop_toBottomOf="@+id/dueDateHint"
-            app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/dueDateDisplay"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/dueDateDisplay"
-            android:src="@drawable/ic_round_event_busy_24"
-            android:contentDescription="@string/due_date_icon" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
