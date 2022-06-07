@@ -8,4 +8,7 @@
     <string name="budget">Budget</string>
     <string name="due_date">Due date</string>
     <string name="start_date">Start date</string>
+    <string name="start_date_icon">Start date icon</string>
+    <string name="mm_dd_yyyy">MM/dd/yyyy</string>
+    <string name="due_date_icon">Due date icon</string>
 </resources>

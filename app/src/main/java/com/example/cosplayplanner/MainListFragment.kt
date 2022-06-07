@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.cosplayplanner.adapters.MainListAdapter
 import com.example.cosplayplanner.databinding.FragmentMainListBinding
+import com.example.cosplayplanner.databinding.LayoutDateSelectorButtonBinding
 import com.example.cosplayplanner.models.Cosplay
 import io.realm.Realm
 import io.realm.kotlin.where
@@ -13,10 +14,6 @@ import io.realm.kotlin.where
 class MainListFragment : Fragment() {
 
     private lateinit var binding: FragmentMainListBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
