@@ -7,6 +7,14 @@ This app is meant to take the place of the aging Cosplanner\* Android app.
 It's also meant to attract attention to myself as a UI/UX designer. 
 Hi! I like UI/UX design! I'm good at it! You can maybe consider hiring me!
 
+## Technologies Used ##
+* Built in Android Studio
+* Following Material 3 (Material You) design principles
+* Using viewbinding and databinding
+* Using Fragments and Android Navigation Component
+* Using MongoDB Realm
+* Using [skydoves TransformationLayout](https://github.com/skydoves/TransformationLayout)
+
 ## Basic Roadmap (subject to change) ##
 - [ ] Basic CRUD
   - [ ] Create
