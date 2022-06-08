@@ -8,52 +8,61 @@
             name="hint"
             type="String" />
         <variable
-            name="date"
+            name="dateString"
             type="String" />
         <variable
             name="icon"
             type="android.graphics.drawable.Drawable" />
+        <variable
+            name="date"
+            type="java.util.GregorianCalendar" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.skydoves.transformationlayout.TransformationLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/budgetLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/dueDateLayout"
-        android:id="@+id/startDateLayout"
-        android:background="@drawable/rounded_shape_colored"
-        android:paddingVertical="5dp"
-        android:paddingHorizontal="15dp">
+        android:id="@+id/transformationLayout"
+        app:transformation_fadeMode="cross">
 
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{hint}"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/budgetLayout"
             app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/dateHint"
-            android:textSize="11sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{date}"
-            app:layout_constraintTop_toBottomOf="@+id/dateHint"
-            app:layout_constraintStart_toStartOf="parent"
-            android:id="@+id/dateDisplay"
-            android:textSize="16sp"/>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/dateDisplay"
-            android:layout_marginStart="5dp"
-            android:src="@{icon}"
-            android:contentDescription="@string/start_date_icon" />
+            app:layout_constraintEnd_toStartOf="@id/dueDateLayout"
+            android:id="@+id/dateLayout"
+            android:background="@drawable/background_rounded_button_outline"
+            android:clickable="true"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="15dp">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{hint}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/dateHint"
+                android:textSize="11sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{dateString}"
+                app:layout_constraintTop_toBottomOf="@+id/dateHint"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/dateDisplay"
+                android:textSize="16sp"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dateDisplay"
+                android:layout_marginStart="5dp"
+                android:src="@{icon}"
+                android:contentDescription="@string/start_date_icon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.skydoves.transformationlayout.TransformationLayout>
 </layout>
 

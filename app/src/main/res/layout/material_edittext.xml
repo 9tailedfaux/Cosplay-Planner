@@ -1,17 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/textlayout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:boxStrokeColor="?colorPrimary"
-    app:startIconTint="?colorPrimary"
-    >
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/edittext"
+<layout>
+    <data>
+        <variable
+            name="hint"
+            type="String" />
+        <variable
+            name="text"
+            type="String" />
+        <variable
+            name="icon"
+            type="android.graphics.drawable.Drawable" />
+    </data>
+    <com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/textlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:boxStrokeColor="?colorPrimary"
+        app:startIconTint="?colorPrimary"
+        app:startIconDrawable="@{icon}">
 
-</com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@{hint}"
+            android:text="@{text}"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+</layout>

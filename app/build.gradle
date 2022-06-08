@@ -11,11 +11,11 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.cosplayplanner"
+        applicationId "com.refractional.cosplayplanner"
         minSdk 26
         targetSdk 31
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -54,6 +54,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-dynamic-features-fragment:2.4.2'
 
     implementation 'com.github.skydoves:transformationlayout:1.1.1'
+    implementation "com.github.skydoves:androidveil:1.1.1"
 
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
