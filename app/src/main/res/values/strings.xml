@@ -11,4 +11,7 @@
     <string name="start_date_icon">Start date icon</string>
     <string name="mm_dd_yyyy">MM/dd/yyyy</string>
     <string name="due_date_icon">Due date icon</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="character_main_image">Character main image</string>
 </resources>

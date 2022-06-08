@@ -1,9 +1,11 @@
 package com.example.cosplayplanner
 
 import android.os.Bundle
+import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Space
 import androidx.fragment.app.Fragment
 import com.example.cosplayplanner.databinding.FragmentEditBinding
 import com.example.cosplayplanner.databinding.LayoutDateSelectorButtonBinding
@@ -46,7 +48,7 @@ class EditFragment : Fragment() {
                 transformationLayout.finishTransform()
                 selectable = true
             }
-            //binding.datePicker.binding.executePendingBindings()
+            binding.datePicker.binding.executePendingBindings()
             transformationLayout.bindTargetView(binding.datePicker.binding.root)
             transformationLayout.startTransform()
         }

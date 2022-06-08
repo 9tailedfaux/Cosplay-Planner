@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -43,7 +44,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:id="@+id/dateHint"
-                android:textSize="11sp"/>
+                android:textSize="11sp"
+                tools:text="Date hint"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -51,7 +53,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/dateHint"
                 app:layout_constraintStart_toStartOf="parent"
                 android:id="@+id/dateDisplay"
-                android:textSize="16sp"/>
+                android:textSize="16sp"
+                tools:text="Jun 7, 2022"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -61,7 +64,8 @@
                 app:layout_constraintStart_toEndOf="@id/dateDisplay"
                 android:layout_marginStart="5dp"
                 android:src="@{icon}"
-                android:contentDescription="@string/start_date_icon" />
+                android:contentDescription="@string/start_date_icon"
+                tools:src="@drawable/ic_round_today_24"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.skydoves.transformationlayout.TransformationLayout>
 </layout>
